@@ -79,7 +79,7 @@ export const servicePillars = [
       uk: "Соцмережі",
     },
     description: {
-      en: "We make the profile look credible, stable and professionally managed.",
+      en: "We make the profile look credible, stable, and professionally managed.",
       uk: "Ми робимо профіль переконливим, стабільним і професійно упорядкованим.",
     },
     items: {
@@ -255,7 +255,7 @@ export const stakesPoints = [
     uk: "Застаріла сторінка чи стороння згадка ранжується вище за ресурс, який ви самі контролюєте.",
   },
   {
-    en: "A single negative review sits on page one, unanswered and unmanaged.",
+    en: "A single negative review sits on page one, unanswered, and unmanaged.",
     uk: "Один негативний відгук лишається на першій сторінці — без відповіді й без управління.",
   },
   {
@@ -282,7 +282,7 @@ export const faqItems = [
   {
     question: { en: "Do you guarantee removal of negative content?", uk: "Чи гарантуєте ви видалення негативного контенту?" },
     answer: {
-      en: "No one can ethically guarantee removal of content they don't control. We focus on what is achievable: suppression, context, and building a stronger signal around it.",
+      en: "No one can ethically guarantee removal of content they don’t control. We focus on what is achievable: suppression, context, and building a stronger signal around it.",
       uk: "Ніхто не може етично гарантувати видалення контенту, який не контролює. Ми фокусуємось на досяжному: приглушенні, контексті й побудові сильнішого сигналу навколо нього.",
     },
   },

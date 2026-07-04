@@ -47,7 +47,7 @@ export default async function ApproachPage({
         <h2 className="text-2xl font-semibold text-white">{locale === "uk" ? "FAQ" : "FAQ"}</h2>
         <p className="mt-4 text-sm leading-7 text-[color:var(--mist)]">
           {locale === "uk"
-            ? "Чи підходить цей підхід для кризових ситуацій? Так. PR-MIND працює як із запобіганням проблемам, так і з їхнєю ліквідацією, з фокусом на швидку ясність і контроль наративу."
+            ? "Чи підходить цей підхід для кризових ситуацій? Так. PR-MIND працює як із запобіганням проблемам, так і з їхньою ліквідацією, з фокусом на швидку ясність і контроль наративу."
             : "Is this approach suitable for crisis situations? Yes. PR-MIND works for both prevention and recovery, with a focus on rapid clarity and narrative control."}
         </p>
       </div>

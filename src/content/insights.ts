@@ -8,17 +8,17 @@ export const insights = [
       uk: "Чому онлайн-репутація впливає на дохід?",
     },
     summary: {
-      en: "A clear view of how online perception changes trust, conversion and business outcomes.",
+      en: "A clear view of how online perception changes trust, conversion, and business outcomes.",
       uk: "Чітке пояснення того, як онлайн-враження впливає на довіру, конверсію та бізнес-результати.",
     },
     intro: {
       en: "Online reputation influences revenue because most buyers research a name before they commit to a decision, and what they find either confirms or undermines the pitch they already heard. A search result, a review, or a stale profile can add friction to a deal that otherwise looked closed.",
-      uk: "Онлайн-репутація впливає на дохід, тому що більшість покупців перевіряють ім'я перед прийняттям рішення, і те, що вони знаходять, або підтверджує, або підриває вже почуту пропозицію. Результат пошуку, відгук чи застарілий профіль можуть додати тертя в угоду, яка здавалася закритою.",
+      uk: "Онлайн-репутація впливає на дохід, тому що більшість покупців перевіряють ім’я перед прийняттям рішення, і те, що вони знаходять, або підтверджує, або підриває вже почуту пропозицію. Результат пошуку, відгук чи застарілий профіль можуть додати тертя в угоду, яка здавалась закритою.",
     },
     keyPoints: {
       en: [
         "Reputation risk rarely blocks a deal outright — it slows the decision down by inviting extra scrutiny.",
-        "Verification happens before any sales conversation, outside the seller's control.",
+        "Verification happens before any sales conversation, outside the seller’s control.",
         "A reputation audit maps search results, reviews, and social mentions before any fix is planned.",
         "Removing friction from the decision is a measurable, if indirect, revenue lever.",
       ],
@@ -37,7 +37,7 @@ export const insights = [
             "Before a call, a purchase, or a partnership, people quietly verify. They search the name, scan the first page, and check reviews. This happens outside any sales process you control, which is exactly why it matters.",
           ],
           uk: [
-            "Перед дзвінком, покупкою чи партнерством люди тихо перевіряють. Вони шукають ім'я, переглядають першу сторінку і читають відгуки. Це відбувається поза будь-яким процесом продажу, який ви контролюєте — саме тому це важливо.",
+            "Перед дзвінком, покупкою чи партнерством люди тихо перевіряють. Вони шукають ім’я, переглядають першу сторінку і читають відгуки. Це відбувається поза будь-яким процесом продажу, який ви контролюєте — саме тому це важливо.",
           ],
         },
       },
@@ -65,7 +65,7 @@ export const insights = [
         question: { en: "Where should a reputation audit start?", uk: "З чого варто починати аудит репутації?" },
         answer: {
           en: "With a full map of what appears on the first page of search and what mentions already exist across review platforms and social channels.",
-          uk: "З повної карти того, що з'являється на першій сторінці пошуку, та наявних згадувань на платформах відгуків і в соціальних каналах.",
+          uk: "З повної карти того, що з’являється на першій сторінці пошуку, та наявних згадувань на платформах відгуків і в соціальних каналах.",
         },
       },
     ],
@@ -148,7 +148,7 @@ export const insights = [
     },
     intro: {
       en: "In the first 48 hours of a reputation issue, the priority is a calm, factual response, not speed for its own sake. A rushed statement that needs correcting later causes more damage than a short delay spent getting the facts straight.",
-      uk: "У перші 48 годин репутаційної кризи пріоритет — спокійна, фактична реакція, а не швидкість заради швидкості. Поспішна заява, яку потім доведеться виправляти, шкодить більше, ніж коротка затримка, витрачена на з'ясування фактів.",
+      uk: "У перші 48 годин репутаційної кризи пріоритет — спокійна, фактична реакція, а не швидкість заради швидкості. Поспішна заява, яку потім доведеться виправляти, шкодить більше, ніж коротка затримка, витрачена на з’ясування фактів.",
     },
     keyPoints: {
       en: [
@@ -158,7 +158,7 @@ export const insights = [
         "Keep the response team small: one decision-maker, one communications lead, one fact-checker.",
       ],
       uk: [
-        "З'ясуйте, що сталося, кого це стосується і де поширюється історія, перш ніж робити публічну заяву.",
+        "З’ясуйте, що сталося, кого це стосується і де поширюється історія, перш ніж робити публічну заяву.",
         "Використовуйте один основний канал для офіційної відповіді — суперечливі заяви загострюють кризу.",
         "Коротка чесна проміжна заява краща за швидку, але неточну.",
         "Тримайте команду реагування невеликою: одна особа, що приймає рішення, один комунікаційний лід, один перевіряючий факти.",
@@ -172,7 +172,7 @@ export const insights = [
             "Establish what actually happened, who is affected, and where the story is spreading before drafting any public statement. Reacting to a rumor as if it were confirmed fact locks you into a weaker position.",
           ],
           uk: [
-            "З'ясуйте, що насправді відбулося, кого це стосується і де поширюється історія, перш ніж готувати будь-яку публічну заяву. Реакція на чутку як на підтверджений факт ставить вас у слабшу позицію.",
+            "З’ясуйте, що насправді відбулося, кого це стосується і де поширюється історія, перш ніж готувати будь-яку публічну заяву. Реакція на чутку як на підтверджений факт ставить вас у слабшу позицію.",
           ],
         },
       },
