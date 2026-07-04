@@ -79,7 +79,11 @@ export function ReputationSurface({ locale, heading, subheading }: { locale: Loc
 
   return (
     <section ref={sectionRef} className="relative overflow-hidden bg-[color:var(--cool-tint)] py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
+        <div className="ambient-blob ambient-blob--action absolute left-[10%] top-1/4 h-[380px] w-[380px]" />
+        <div className="ambient-blob ambient-blob--violet absolute right-[8%] bottom-1/4 h-[340px] w-[340px] [animation-delay:5s]" />
+      </div>
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-[0.28em] text-[color:var(--action)]">
             {locale === "uk" ? "Вітрина бренда" : "Reputation Surface"}
@@ -95,10 +99,10 @@ export function ReputationSurface({ locale, heading, subheading }: { locale: Loc
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
-              className={`rounded-[var(--r)] border p-6 text-sm transition-colors ${
+              className={`rounded-[var(--r)] p-6 text-sm transition-colors ${
                 card.outcome === "noisy"
-                  ? "border-[color:var(--line)] bg-[color:var(--ink-2)] text-[color:var(--fog)]"
-                  : "border-[color:var(--line)] bg-[color:var(--graphite)] text-[color:var(--porcelain)]"
+                  ? "border border-[color:var(--line)] bg-[color:var(--ink-2)] text-[color:var(--fog)]"
+                  : "glass-surface text-[color:var(--porcelain)]"
               }`}
             >
               {locale === "uk" ? card.label.uk : card.label.en}

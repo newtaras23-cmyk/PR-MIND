@@ -20,7 +20,7 @@ export function ContactDock() {
         <div
           role="menu"
           aria-label={locale === "uk" ? "Канали зв’язку" : "Contact channels"}
-          className="w-64 rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-3 shadow-2xl"
+          className="glass-surface w-64 rounded-[var(--r)] p-3"
         >
           {channels.map((channel) =>
             channel.href ? (

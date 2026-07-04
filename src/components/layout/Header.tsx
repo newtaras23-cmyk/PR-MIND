@@ -14,6 +14,7 @@ export function Header() {
   const restOfPath = pathname?.split("/").slice(2).join("/") ?? "";
   const otherLocaleHref = `/${otherLocale}${restOfPath ? `/${restOfPath}` : ""}`;
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const navItems = [
     { href: "/services", label: dictionary.common.nav.services },
@@ -32,8 +33,19 @@ export function Header() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [mobileOpen]);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-[color:var(--line)]/80 bg-[color:var(--ink)]/90 backdrop-blur">
+    <header
+      className={`sticky top-0 z-50 transition-colors duration-300 ${
+        scrolled ? "glass-surface" : "border-b border-[color:var(--line)]/80 bg-[color:var(--ink)]/90 backdrop-blur"
+      }`}
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <Link href="/" className="text-xl font-semibold tracking-[0.24em] text-[color:var(--porcelain)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[color:var(--action)]">
           PR-MIND

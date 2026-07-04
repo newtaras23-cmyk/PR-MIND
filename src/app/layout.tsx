@@ -47,6 +47,11 @@ export default function RootLayout({
       className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col pb-16 md:pb-0">
+        <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+          <div className="ambient-blob ambient-blob--action absolute -top-24 left-[-10%] h-[420px] w-[420px]" />
+          <div className="ambient-blob ambient-blob--violet absolute -top-32 right-[-8%] h-[380px] w-[380px] [animation-delay:6s]" />
+          <div className="ambient-blob ambient-blob--teal absolute bottom-[-15%] right-[-5%] h-[360px] w-[360px] [animation-delay:3s]" />
+        </div>
         <StructuredData />
         <UtmCapture />
         <MotionProvider>
