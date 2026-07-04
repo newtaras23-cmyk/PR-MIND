@@ -8,11 +8,11 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
       return;
     }
 
-    let lenis: import("@studio-freight/lenis").default | undefined;
+    let lenis: import("lenis").default | undefined;
     let frame: number | undefined;
     let cancelled = false;
 
-    import("@studio-freight/lenis").then(({ default: Lenis }) => {
+    import("lenis").then(({ default: Lenis }) => {
       if (cancelled) return;
 
       lenis = new Lenis({
