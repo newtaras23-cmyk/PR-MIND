@@ -71,7 +71,12 @@ export default async function InsightDetailPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <article className="rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8 text-sm leading-8 text-[color:var(--mist)]">
-        <p className="text-base text-[color:var(--porcelain)]">{locale === "uk" ? insight.intro.uk : insight.intro.en}</p>
+        <div className="rounded-[var(--r-sm)] border border-[color:var(--action)]/30 bg-[color:var(--action)]/10 p-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[color:var(--action)]">
+            {dictionary.pages.insights.shortAnswer}
+          </p>
+          <p className="mt-3 text-base text-[color:var(--porcelain)]">{locale === "uk" ? insight.intro.uk : insight.intro.en}</p>
+        </div>
 
         <ul className="mt-6 space-y-2 border-l-2 border-[color:var(--action)]/40 pl-4">
           {(locale === "uk" ? insight.keyPoints.uk : insight.keyPoints.en).map((point) => (
@@ -92,13 +97,21 @@ export default async function InsightDetailPage({
           </div>
         ))}
 
-        <div className="mt-10 border-t border-[color:var(--line)] pt-6">
+        <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-[color:var(--line)] pt-6">
           <Link
             href={`/${locale}/services/${insight.relatedPillar}`}
             className="inline-flex text-sm font-medium text-[color:var(--action)]"
           >
             {locale === "uk" ? "Пов’язана послуга" : "Related service"} →
           </Link>
+          {insight.rubric && (
+            <Link
+              href={`/${locale}/services/pr`}
+              className="inline-flex text-sm font-medium text-[color:var(--action)]"
+            >
+              {locale === "uk" ? "Репутаційний PR" : "Reputation PR"} →
+            </Link>
+          )}
         </div>
       </article>
 

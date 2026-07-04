@@ -4,7 +4,7 @@ import { approachSteps, servicePillars, stats } from "../src/content/services";
 
 describe("content collections", () => {
   it("exposes at least three insights items", () => {
-    expect(insights).toHaveLength(3);
+    expect(insights).toHaveLength(4);
     expect(insights[0].slug).toContain("reputation");
   });
 

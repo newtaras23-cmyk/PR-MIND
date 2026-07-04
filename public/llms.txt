@@ -23,9 +23,12 @@ PR-MIND is not a generic marketing or SEO agency — its work is scoped specific
 
 ## Insights (answer-first articles)
 
+- [The world we live in: why it matters that AI can see your business](https://prmind.example/en/insights/chomu-shtuchnyi-intelekt-maie-bachyty-vash-biznes) — AI-visibility
 - [Why online reputation influences revenue](https://prmind.example/en/insights/online-reputation-and-revenue)
 - [How the first page of search shapes trust in seconds](https://prmind.example/en/insights/search-results-and-trust)
 - [What to do in the first 48 hours of a reputation issue](https://prmind.example/en/insights/crisis-reputation-first-48-hours)
+
+The AI-visibility rubric covers how large language models (ChatGPT, Perplexity, Gemini, Claude) select which businesses to recommend, and treats that as an extension of reputation management.
 
 ## Languages
 

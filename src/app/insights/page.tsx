@@ -28,6 +28,7 @@ export default async function InsightsPage({
   const resolvedParams = (await params) as { locale?: string } | undefined;
   const locale = resolveLocale(resolvedParams?.locale);
   const dictionary = getDictionary(locale);
+  const featuredInsights = [...insights].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
   return (
     <PageShell
       eyebrow={dictionary.pages.insights.eyebrow}
@@ -35,9 +36,16 @@ export default async function InsightsPage({
       description={dictionary.pages.insights.description}
     >
       <div className="grid gap-6 lg:grid-cols-2">
-        {insights.map((item) => (
+        {featuredInsights.map((item) => (
           <article key={item.slug} className="rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
-            <p className="text-sm uppercase tracking-[0.28em] text-[color:var(--action)]">{dictionary.pages.insights.eyebrow}</p>
+            <div className="flex flex-wrap items-center gap-3">
+              <p className="text-sm uppercase tracking-[0.28em] text-[color:var(--action)]">{dictionary.pages.insights.eyebrow}</p>
+              {item.rubric && (
+                <span className="rounded-full border border-[color:var(--action)]/40 bg-[color:var(--action)]/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--action)]">
+                  {item.rubric}
+                </span>
+              )}
+            </div>
             <h2 className="mt-4 text-2xl font-semibold text-white">{locale === "uk" ? item.title.uk : item.title.en}</h2>
             <p className="mt-4 text-sm leading-7 text-[color:var(--mist)]">{locale === "uk" ? item.summary.uk : item.summary.en}</p>
             <Link href={`/${locale}/insights/${item.slug}`} className="mt-8 inline-flex text-sm font-medium text-[color:var(--action)]">
