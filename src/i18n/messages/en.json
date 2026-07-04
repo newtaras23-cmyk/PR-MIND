@@ -1,0 +1,131 @@
+{
+  "common": {
+    "getAudit": "Get an audit",
+    "nav": {
+      "services": "Services",
+      "approach": "Approach",
+      "cases": "Cases",
+      "insights": "Insights",
+      "contacts": "Contacts"
+    },
+    "footer": {
+      "navigate": "Navigate",
+      "contact": "Contact",
+      "privacy": "Privacy",
+      "terms": "Terms"
+    }
+  },
+  "home": {
+    "eyebrow": "Reputation, under control",
+    "title": "Control what the world sees first.",
+    "description": "We turn online reputation into a measurable asset through monitoring, search visibility, PR, and discreet strategy.",
+    "primaryCta": "Get an audit",
+    "secondaryCta": "How we work",
+    "signalEyebrow": "Signal control",
+    "signalTitle": "Search, media, and social presence are part of your credibility.",
+    "discretionTitle": "Discretion first",
+    "discretionText": "Every plan is structured around privacy, control, and clarity so the work stays visible only where it matters.",
+    "approachEyebrow": "Approach",
+    "approachTitle": "A calm system for high-stakes visibility.",
+    "approachDescription": "We work in three deliberate stages so each action improves trust and reduces noise.",
+    "servicesEyebrow": "Services",
+    "servicesTitle": "Six service directions, grouped into pillars.",
+    "servicesDescription": "Every service is designed around real reputation risk, visibility, and trust.",
+    "ctaEyebrow": "Signal",
+    "ctaTitle": "Your reputation should feel controlled, not chaotic.",
+    "ctaButton": "Book a confidential audit",
+    "surfaceHeading": "From noisy search results to a controlled top 10.",
+    "surfaceSubheading": "Scroll to see how a managed program reduces the signals that create doubt and raises the ones that build trust.",
+    "stakesEyebrow": "The stakes",
+    "stakesTitle": "What the world sees when it searches your name.",
+    "stakesDescription": "Most reputation risk is quiet until the wrong moment — a due-diligence check, a first meeting, a press mention.",
+    "trustEyebrow": "Trust & confidentiality",
+    "trustTitle": "Built for clients who need discretion, not attention.",
+    "trustDescription": "Every engagement is structured so sensitive work stays private, and only the outcome is visible.",
+    "faqEyebrow": "FAQ",
+    "faqTitle": "Common questions before you reach out."
+  },
+  "pages": {
+    "services": {
+      "eyebrow": "Services",
+      "title": "A structured view of reputation work",
+      "description": "The core service pillars are grouped around search visibility, trust signals, content, social presence and digital surfaces.",
+      "whyTitle": "Why this works",
+      "whyText": "PR-MIND combines reputation analysis, content strategy, and technical execution so every action is visible to your audience and controlled for your business.",
+      "viewPillar": "View pillar"
+    },
+    "approach": {
+      "eyebrow": "Approach",
+      "title": "Three stages for controlled reputation work",
+      "description": "We move from diagnosis to strategy to ongoing management so each action is clear, measurable and discreet."
+    },
+    "cases": {
+      "eyebrow": "Cases",
+      "title": "Confidential outcomes, structured around trust",
+      "description": "Real client narratives remain private, so the case studies here describe the type of work, not the people behind it."
+    },
+    "contacts": {
+      "eyebrow": "Contacts",
+      "title": "Choose the channel that fits your situation",
+      "description": "Every lead path is designed for privacy, clarity and speed. Use the form, a messenger, or a direct call."
+    },
+    "insights": {
+      "eyebrow": "Insights",
+      "title": "Articles that help people understand reputation work",
+      "description": "The insights section is built as an SEO and AEO foundation for the brand, not just a blog archive.",
+      "readArticle": "Read article",
+      "whyTitle": "Why it matters",
+      "whyText": "Reputation affects not only trust, but also conversion, negotiations, partner acquisition, and long-term brand growth."
+    },
+    "privacy": {
+      "eyebrow": "Privacy",
+      "title": "Privacy Policy",
+      "description": "Draft policy — requires client legal review before publication. // TODO: legal review",
+      "dataTitle": "What we collect",
+      "dataText": "Name, preferred contact channel, and contact details you provide through the lead form. // TODO: extend once analytics is enabled",
+      "useTitle": "How we use it",
+      "useText": "Solely to respond to your request and route it to the right contact channel. Data is not shared with third parties without consent.",
+      "rightsTitle": "Your rights",
+      "rightsText": "You may request deletion or a copy of your data by writing to hello@prmind.example."
+    },
+    "terms": {
+      "eyebrow": "Contacts",
+      "title": "Terms of Service",
+      "description": "Draft terms — requires client legal review before publication. // TODO: legal review",
+      "useTitle": "Use of this site",
+      "useText": "Content on this site is provided for informational purposes about PR-MIND services and is not legal or financial advice.",
+      "requestsTitle": "Requests and communication",
+      "requestsText": "Submitting the lead form does not create a contractual obligation — engagement terms are agreed separately."
+    }
+  },
+  "pillarDetail": {
+    "whatIncluded": "What is included",
+    "howWeWork": "How we work",
+    "nextStep": "Next step",
+    "nextStepText": "Tell us about your situation and we will reply with a concrete plan and the right contact channel.",
+    "allPillars": "All service pillars"
+  },
+  "orm": {
+    "howWeRun": "How we run the ORM program",
+    "whoForTitle": "Who ORM is for",
+    "whoForText": "ORM fits founders, executives, and public figures who need a long-term, managed program rather than a one-off campaign."
+  },
+  "leadForm": {
+    "heading": "Request a confidential audit",
+    "subheading": "We will respond with a clear next step and the right channel for your context.",
+    "nameLabel": "Name",
+    "channelLabel": "Preferred channel",
+    "channelSelect": "Select",
+    "contactLabel": "Contact details",
+    "requestLabel": "Short request",
+    "submit": "Send request",
+    "submitting": "Sending...",
+    "successMessage": "Thank you. We have received your request and will contact you shortly.",
+    "errorMessage": "We could not send the request right now. Please try again shortly.",
+    "validation": {
+      "name": "Please share your name",
+      "channel": "Choose a contact channel",
+      "contact": "Please add a valid contact"
+    }
+  }
+}

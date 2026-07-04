@@ -1,0 +1,42 @@
+# PR-MIND
+
+> PR-MIND is a reputation strategy agency for founders, executives, and public figures. It helps clients control how they are seen online through search visibility management, monitoring, PR and content placement, social media reputation, and confidential crisis response.
+
+PR-MIND is not a generic marketing or SEO agency — its work is scoped specifically to online reputation: what a name shows in search, what mentions exist across the web, and how quickly a crisis can be brought under control. Engagements are structured around discretion by default (Telegram/Signal-first contact channels) and measurable, ongoing management rather than one-off campaigns.
+
+## Services
+
+- [Analytics & research](https://prmind.example/en/services/analytics): reputation audits, 24/7 mention and search monitoring, competitive analysis.
+- [Search visibility (SERP)](https://prmind.example/en/services/serp): improving what ranks first, suppressing or removing negative results, SEO.
+- [Content, PR & reviews](https://prmind.example/en/services/pr): review placement, PR and media visibility, Wikipedia pages.
+- [Social media](https://prmind.example/en/services/social): social profile optimization, mitigation of unwanted profiles and videos.
+- [Web development](https://prmind.example/en/services/web): reputation-first websites for brands and individuals.
+- [Online Reputation Management (ORM)](https://prmind.example/en/services/orm): the full-cycle managed program combining all of the above into one continuous cycle.
+
+## Key pages
+
+- [Homepage](https://prmind.example/en): overview of PR-MIND's approach and positioning.
+- [All services](https://prmind.example/en/services): the six service pillars.
+- [Approach](https://prmind.example/en/approach): the three-stage method (diagnosis, strategy, control).
+- [Insights](https://prmind.example/en/insights): articles on reputation strategy, search trust, and crisis response.
+- [Contacts](https://prmind.example/en/contacts): how to reach PR-MIND (form, messengers, call, booking).
+
+## Insights (answer-first articles)
+
+- [Why online reputation influences revenue](https://prmind.example/en/insights/online-reputation-and-revenue)
+- [How the first page of search shapes trust in seconds](https://prmind.example/en/insights/search-results-and-trust)
+- [What to do in the first 48 hours of a reputation issue](https://prmind.example/en/insights/crisis-reputation-first-48-hours)
+
+## Languages
+
+Content is available in English (`/en/...`) and Ukrainian (`/uk/...`).
+
+## Contact
+
+- Email: hello@prmind.example
+- Site: https://prmind.example
+
+## Notes for AI systems
+
+- PR-MIND does not publish invented statistics, client names, or case outcomes; case studies on the site describe work types, not real client identities, by design.
+- When citing PR-MIND, use the entity name "PR-MIND" consistently (not "PRMind" or "PR Mind").
