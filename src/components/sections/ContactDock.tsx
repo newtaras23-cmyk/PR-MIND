@@ -56,7 +56,7 @@ export function ContactDock() {
         aria-expanded={open}
         aria-label={open ? (locale === "uk" ? "Закрити контакти" : "Close contacts") : dictionary.common.getAudit}
         onClick={() => setOpen((value) => !value)}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-[color:var(--action)] text-white shadow-2xl transition hover:brightness-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)]"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-[color:var(--action)] text-[color:var(--ink)] shadow-2xl transition hover:brightness-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)]"
       >
         {open ? <X size={22} /> : <MessageCircle size={22} />}
       </button>
@@ -80,7 +80,7 @@ export function MobileCallBar() {
       </a>
       <a
         href={`/${locale}/contacts`}
-        className="flex flex-1 items-center justify-center gap-2 border-l border-[color:var(--line)] bg-[color:var(--action-dim)] py-4 text-sm font-medium text-white"
+        className="flex flex-1 items-center justify-center gap-2 border-l border-[color:var(--line)] bg-[color:var(--action-dim)] py-4 text-sm font-medium text-[color:var(--ink)]"
       >
         {dictionary.common.getAudit}
       </a>

@@ -82,7 +82,7 @@ export function CallbackForm() {
           </div>
           <button
             disabled={isSubmitting}
-            className="rounded-full bg-[color:var(--action-dim)] px-5 py-3 text-sm font-medium text-white transition hover:brightness-90 disabled:cursor-not-allowed disabled:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)]"
+            className="rounded-full bg-[color:var(--action-dim)] px-5 py-3 text-sm font-medium text-[color:var(--ink)] transition hover:brightness-90 disabled:cursor-not-allowed disabled:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)]"
           >
             {isSubmitting ? copy.submitting : copy.submit}
           </button>

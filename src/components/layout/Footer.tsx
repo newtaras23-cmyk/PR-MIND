@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Logo } from "@/components/ui/Logo";
 import { getDictionary, resolveLocale } from "@/i18n/dictionaries";
 
 export function Footer() {
@@ -13,7 +14,7 @@ export function Footer() {
     <footer className="border-t border-[color:var(--line)] bg-[color:var(--ink)] text-[color:var(--mist)]">
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-12 lg:flex-row lg:items-start lg:justify-between lg:px-8">
         <div className="max-w-md">
-          <p className="text-xl font-semibold tracking-[0.24em] text-[color:var(--porcelain)]">PR-MIND</p>
+          <Logo variant="full" tone="washi" className="h-7 w-auto opacity-80" />
           <p className="mt-3 text-sm leading-7">
             Reputation strategy for founders, executives, and public figures who need clarity, discretion, and control.
           </p>

@@ -58,7 +58,7 @@ export default async function Home({
             </Reveal>
             <Reveal delay={0.21}>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <Link href={`/${locale}/contacts`} prefetch={false} className="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--action-dim)] px-6 py-3 font-medium text-white transition hover:brightness-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)]">
+                <Link href={`/${locale}/contacts`} prefetch={false} className="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--action-dim)] px-6 py-3 font-medium text-[color:var(--ink)] transition hover:brightness-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)]">
                   {dictionary.home.primaryCta} <ArrowRight size={18} />
                 </Link>
                 <Link href={`/${locale}/approach`} className="inline-flex items-center justify-center rounded-full border border-[color:var(--line)] px-6 py-3 font-medium text-[color:var(--porcelain)] transition hover:border-[color:var(--action)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)]">
@@ -181,7 +181,7 @@ export default async function Home({
                 <p className="text-sm font-medium uppercase tracking-[0.28em] text-[color:var(--action)]">{dictionary.home.ctaEyebrow}</p>
                 <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">{dictionary.home.ctaTitle}</h2>
               </div>
-              <Link href={`/${locale}/contacts`} prefetch={false} className="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--action-dim)] px-6 py-3 font-medium text-white transition hover:brightness-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)]">
+              <Link href={`/${locale}/contacts`} prefetch={false} className="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--action-dim)] px-6 py-3 font-medium text-[color:var(--ink)] transition hover:brightness-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)]">
                 {dictionary.home.ctaButton} <Sparkles size={18} />
               </Link>
             </div>

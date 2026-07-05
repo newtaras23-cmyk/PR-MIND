@@ -45,12 +45,13 @@ export default function AmbientParticles() {
       detectRetina: true,
       particles: {
         number: { value: PARTICLE_COUNT, density: { enable: true } },
-        color: { value: ["#F5F6F7", "#0A84FF"] },
+        // Washi (brand off-white) dominant, gold in ~1 of 4 particles to match the brand's low accent ratio.
+        color: { value: ["#F4EEE1", "#F4EEE1", "#F4EEE1", "#C39A43"] },
         opacity: { value: { min: 0.15, max: 0.5 } },
         size: { value: { min: 1, max: 2.2 } },
         links: {
           enable: true,
-          color: "#0A84FF",
+          color: "#C39A43",
           distance: 140,
           opacity: 0.12,
           width: 1,
