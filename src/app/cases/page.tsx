@@ -64,7 +64,7 @@ export default async function CasesPage({
         {cases.map((item) => (
           <article key={item.title.en} className="rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
             <p className="text-sm uppercase tracking-[0.28em] text-[color:var(--action)]">{locale === "uk" ? item.tag.uk : item.tag.en}</p>
-            <h2 className="mt-4 text-2xl font-semibold text-white">{locale === "uk" ? item.title.uk : item.title.en}</h2>
+            <h2 className="mt-4 text-2xl font-semibold text-[color:var(--porcelain)]">{locale === "uk" ? item.title.uk : item.title.en}</h2>
             <p className="mt-4 text-sm leading-7 text-[color:var(--mist)]">{locale === "uk" ? item.summary.uk : item.summary.en}</p>
           </article>
         ))}

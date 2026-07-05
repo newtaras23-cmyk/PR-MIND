@@ -49,7 +49,7 @@ export function CallbackForm() {
 
   return (
     <div className="rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
-      <h2 className="text-xl font-semibold text-white">
+      <h2 className="text-xl font-semibold text-[color:var(--porcelain)]">
         {locale === "uk" ? "Замовити дзвінок" : "Request a callback"}
       </h2>
       <p className="mt-3 text-sm leading-7 text-[color:var(--mist)]">
@@ -82,7 +82,7 @@ export function CallbackForm() {
           </div>
           <button
             disabled={isSubmitting}
-            className="rounded-full bg-[color:var(--action-dim)] px-5 py-3 text-sm font-medium text-[color:var(--ink)] transition hover:brightness-90 disabled:cursor-not-allowed disabled:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)]"
+            className="rounded-full bg-[color:var(--action-dim)] px-5 py-3 text-sm font-medium text-[color:var(--on-gold)] transition hover:brightness-90 disabled:cursor-not-allowed disabled:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)]"
           >
             {isSubmitting ? copy.submitting : copy.submit}
           </button>

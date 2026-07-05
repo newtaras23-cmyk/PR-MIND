@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { AmbientParticles } from "@/components/animation/AmbientParticlesLoader";
 import { MotionProvider } from "@/components/animation/MotionProvider";
 import { SmoothScrollProvider } from "@/components/animation/SmoothScrollProvider";
+import { ThemeProvider } from "@/components/animation/ThemeProvider";
 import { UtmCapture } from "@/components/animation/UtmCapture";
 import { ContactDock, MobileCallBar } from "@/components/sections/ContactDock";
 import { StructuredData } from "@/components/seo/StructuredData";
@@ -46,22 +47,25 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${displayFont.variable} ${bodyFont.variable} ${monoFont.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col pb-16 md:pb-0">
-        <AmbientParticles />
-        <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-          <div
-            className="ambient-blob ambient-blob--action absolute -top-24 left-[-10%] h-[420px] w-[420px]"
-            style={{ opacity: 0.08 }}
-          />
-        </div>
-        <StructuredData />
-        <UtmCapture />
-        <MotionProvider>
-          <SmoothScrollProvider>{children}</SmoothScrollProvider>
-          <ContactDock />
-          <MobileCallBar />
-        </MotionProvider>
+        <ThemeProvider>
+          <AmbientParticles />
+          <div aria-hidden="true" className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+            <div
+              className="ambient-blob ambient-blob--action absolute -top-24 left-[-10%] h-[420px] w-[420px]"
+              style={{ opacity: "var(--ambient-depth-opacity)" }}
+            />
+          </div>
+          <StructuredData />
+          <UtmCapture />
+          <MotionProvider>
+            <SmoothScrollProvider>{children}</SmoothScrollProvider>
+            <ContactDock />
+            <MobileCallBar />
+          </MotionProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

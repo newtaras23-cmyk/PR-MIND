@@ -84,7 +84,7 @@ export function ReputationSurface({ locale, heading, subheading }: { locale: Loc
           <p className="text-sm font-medium uppercase tracking-[0.28em] text-[color:var(--action)]">
             {locale === "uk" ? "Вітрина бренда" : "Reputation Surface"}
           </p>
-          <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">{heading}</h2>
+          <h2 className="mt-4 text-3xl font-semibold text-[color:var(--porcelain)] sm:text-4xl">{heading}</h2>
           <p className="mt-4 text-lg leading-8 text-[color:var(--mist)]">{subheading}</p>
         </div>
 

@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-:root {
+/* Night (default) — the brand's natural mode: sumi ink base, washi text, gold accent. */
+:root,
+[data-theme="dark"] {
   --ink: #17140f;
   --ink-2: #1f1b15;
   --graphite: #29241c;
@@ -13,6 +15,30 @@
   --warm-tint: #1c1710;
   --action: #c39a43;
   --action-dim: #9a7a34;
+  /* Text sitting on top of the gold accent (buttons, FAB) — stays dark ink regardless of theme. */
+  --on-gold: #17140f;
+  --ambient-depth-opacity: 0.08;
+}
+
+/* Day — same three brand colors, roles inverted. Washi base, sumi ink text, same gold accent. */
+[data-theme="light"] {
+  --ink: #f4eee1;
+  --ink-2: #f0e9d9;
+  --graphite: #ede6d6;
+  --line: #d8cfbc;
+  --fog: #6b6355;
+  --mist: #4a4438;
+  --porcelain: #17140f;
+  --white: #ffffff;
+  --cool-tint: #e4dac3;
+  --warm-tint: #f0e9da;
+  --action: #b98f33;
+  --action-dim: #9a7a34;
+  --on-gold: #17140f;
+  --ambient-depth-opacity: 0.04;
+}
+
+:root {
   --r: 14px;
   --r-sm: 8px;
   --background: var(--ink);
@@ -34,6 +60,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3 {
@@ -54,7 +81,7 @@ h1, h2, h3 {
 
 ::selection {
   background: color-mix(in srgb, var(--action) 30%, transparent);
-  color: white;
+  color: var(--on-gold);
 }
 
 /* Liquid glass — dosed use only: sticky nav, floating dock, overlay cards. Never on large text blocks (legibility drops on blurred glass). */
@@ -78,10 +105,24 @@ h1, h2, h3 {
     0 8px 32px rgba(0, 0, 0, 0.35);
 }
 
+/* On washi, white-tinted glass disappears — flip to a dark-tinted, dark-bordered glass instead. */
+[data-theme="light"] .glass-surface,
+[data-theme="light"] .glass-surface--dark {
+  background: rgba(23, 20, 15, 0.05);
+  border: 1px solid rgba(23, 20, 15, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 8px 32px rgba(23, 20, 15, 0.12);
+}
+
 @supports not (backdrop-filter: blur(1px)) {
   .glass-surface,
   .glass-surface--dark {
     background: rgba(19, 20, 23, 0.94);
+  }
+  [data-theme="light"] .glass-surface,
+  [data-theme="light"] .glass-surface--dark {
+    background: rgba(237, 230, 214, 0.94);
   }
 }
 
@@ -96,6 +137,10 @@ h1, h2, h3 {
   animation: ambient-drift 26s ease-in-out infinite alternate;
 }
 
+[data-theme="light"] .ambient-blob {
+  opacity: 0.1;
+}
+
 .ambient-blob--action {
   background: var(--action);
 }
@@ -106,6 +151,24 @@ h1, h2, h3 {
 
 .ambient-blob--teal {
   background: #17c9c9;
+}
+
+/* Logo tone switch — both versions render, CSS shows the right one so there's no
+   client-side theme detection (and so no hydration flash) on this above-the-fold mark. */
+.theme-show-light {
+  display: none;
+}
+
+.theme-show-dark {
+  display: block;
+}
+
+[data-theme="light"] .theme-show-dark {
+  display: none;
+}
+
+[data-theme="light"] .theme-show-light {
+  display: block;
 }
 
 @keyframes ambient-drift {

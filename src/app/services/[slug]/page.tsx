@@ -67,7 +67,7 @@ export default async function PillarDetailPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <div className="rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
-        <h2 className="text-xl font-semibold text-white">{dictionary.pillarDetail.whatIncluded}</h2>
+        <h2 className="text-xl font-semibold text-[color:var(--porcelain)]">{dictionary.pillarDetail.whatIncluded}</h2>
         <ul className="mt-6 space-y-3 text-sm text-[color:var(--mist)]">
           {(locale === "uk" ? pillar.items.uk : pillar.items.en).map((item) => (
             <li key={item} className="flex gap-2">
@@ -79,7 +79,7 @@ export default async function PillarDetailPage({
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-semibold text-white">{dictionary.pillarDetail.howWeWork}</h2>
+        <h2 className="text-2xl font-semibold text-[color:var(--porcelain)]">{dictionary.pillarDetail.howWeWork}</h2>
         <div className="mt-6 grid gap-6 md:grid-cols-3">
           {approachSteps.map((step, index) => (
             <div key={`${step.title.en}-${index}`} className="rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
@@ -93,7 +93,7 @@ export default async function PillarDetailPage({
 
       <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
-          <h2 className="text-2xl font-semibold text-white">{dictionary.pillarDetail.nextStep}</h2>
+          <h2 className="text-2xl font-semibold text-[color:var(--porcelain)]">{dictionary.pillarDetail.nextStep}</h2>
           <p className="mt-4 text-sm leading-7 text-[color:var(--mist)]">{dictionary.pillarDetail.nextStepText}</p>
           <Link href={`/${locale}/services`} className="mt-6 inline-flex text-sm font-medium text-[color:var(--action)]">
             {dictionary.pillarDetail.allPillars} →

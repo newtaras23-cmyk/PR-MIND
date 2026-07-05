@@ -57,14 +57,14 @@ export default async function OrmServicePage({
       <div className="grid gap-6 lg:grid-cols-2">
         {ormService.features.map((feature) => (
           <div key={feature.title.en} className="rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
-            <h2 className="text-xl font-semibold text-white">{locale === "uk" ? feature.title.uk : feature.title.en}</h2>
+            <h2 className="text-xl font-semibold text-[color:var(--porcelain)]">{locale === "uk" ? feature.title.uk : feature.title.en}</h2>
             <p className="mt-3 text-sm leading-7 text-[color:var(--mist)]">{locale === "uk" ? feature.text.uk : feature.text.en}</p>
           </div>
         ))}
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-semibold text-white">{dictionary.orm.howWeRun}</h2>
+        <h2 className="text-2xl font-semibold text-[color:var(--porcelain)]">{dictionary.orm.howWeRun}</h2>
         <div className="mt-6 grid gap-6 md:grid-cols-3">
           {ormService.process.map((step, index) => (
             <div key={`${step.title.en}-${index}`} className="rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
@@ -78,7 +78,7 @@ export default async function OrmServicePage({
 
       <div className="mt-12 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
-          <h2 className="text-2xl font-semibold text-white">{dictionary.orm.whoForTitle}</h2>
+          <h2 className="text-2xl font-semibold text-[color:var(--porcelain)]">{dictionary.orm.whoForTitle}</h2>
           <p className="mt-4 text-sm leading-7 text-[color:var(--mist)]">{dictionary.orm.whoForText}</p>
           <Link href={`/${locale}/services`} className="mt-6 inline-flex text-sm font-medium text-[color:var(--action)]">
             {dictionary.pillarDetail.allPillars} →

@@ -25,19 +25,43 @@ const SOURCES: Record<LogoVariant, Record<"ink" | "washi", { src: string; width:
 };
 
 export function Logo({ variant = "full", tone = "auto", className, priority = false }: LogoProps) {
-  const resolvedTone = tone === "auto" ? "washi" : tone;
-  const { src, width, height } = SOURCES[variant][resolvedTone];
+  const loading = priority ? "eager" : "lazy";
+  const fetchPriority = priority ? "high" : "auto";
 
+  if (tone !== "auto") {
+    const { src, width, height } = SOURCES[variant][tone];
+    return (
+      // eslint-disable-next-line @next/next/no-img-element -- vector logo, no raster optimization needed
+      <img src={src} alt="PR-MIND" width={width} height={height} className={className} loading={loading} fetchPriority={fetchPriority} />
+    );
+  }
+
+  // Both tones render; CSS ([data-theme]) shows the right one instantly from the theme
+  // blocking script, with no client-side theme detection and so no hydration flash.
+  const washi = SOURCES[variant].washi;
+  const ink = SOURCES[variant].ink;
   return (
-    // eslint-disable-next-line @next/next/no-img-element -- vector logo, no raster optimization needed
-    <img
-      src={src}
-      alt="PR-MIND"
-      width={width}
-      height={height}
-      className={className}
-      loading={priority ? "eager" : "lazy"}
-      fetchPriority={priority ? "high" : "auto"}
-    />
+    <>
+      {/* eslint-disable-next-line @next/next/no-img-element -- vector logo, no raster optimization needed */}
+      <img
+        src={washi.src}
+        alt="PR-MIND"
+        width={washi.width}
+        height={washi.height}
+        className={`theme-show-dark ${className ?? ""}`}
+        loading={loading}
+        fetchPriority={fetchPriority}
+      />
+      {/* eslint-disable-next-line @next/next/no-img-element -- vector logo, no raster optimization needed */}
+      <img
+        src={ink.src}
+        alt="PR-MIND"
+        width={ink.width}
+        height={ink.height}
+        className={`theme-show-light ${className ?? ""}`}
+        loading={loading}
+        fetchPriority={fetchPriority}
+      />
+    </>
   );
 }

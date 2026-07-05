@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { getDictionary, resolveLocale } from "@/i18n/dictionaries";
 
 export function Header() {
@@ -49,7 +50,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
         <Link href="/" className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[color:var(--action)]">
-          <Logo variant="full" tone="washi" priority className="h-12 w-auto sm:h-14 md:h-16" />
+          <Logo variant="full" priority className="h-12 w-auto sm:h-14 md:h-16" />
         </Link>
         <nav aria-label="Primary" className="hidden items-center gap-6 text-sm text-[color:var(--mist)] md:flex">
           {navItems.map((item) => (
@@ -71,9 +72,10 @@ export function Header() {
           >
             {otherLocale.toUpperCase()}
           </Link>
+          <ThemeToggle className="hidden sm:flex" />
           <Link
             href={`/${locale}/contacts`} prefetch={false}
-            className="hidden rounded-full bg-[color:var(--action-dim)] px-4 py-2 text-sm font-medium text-[color:var(--ink)] transition hover:brightness-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)] sm:inline-flex"
+            className="hidden rounded-full bg-[color:var(--action-dim)] px-4 py-2 text-sm font-medium text-[color:var(--on-gold)] transition hover:brightness-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)] sm:inline-flex"
           >
             {dictionary.common.getAudit}
           </Link>
@@ -107,6 +109,10 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+            <div className="flex items-center gap-3 pt-2">
+              <ThemeToggle />
+              <span>{dictionary.common.theme.toggle}</span>
+            </div>
           </div>
         </nav>
       ) : null}

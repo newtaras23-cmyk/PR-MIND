@@ -37,7 +37,7 @@ export default async function ServicesPage({
       <div className="grid gap-6 lg:grid-cols-2">
         {servicePillars.map((pillar) => (
           <article key={pillar.slug} className="rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
-            <h2 className="text-2xl font-semibold text-white">{locale === "uk" ? pillar.title.uk : pillar.title.en}</h2>
+            <h2 className="text-2xl font-semibold text-[color:var(--porcelain)]">{locale === "uk" ? pillar.title.uk : pillar.title.en}</h2>
             <p className="mt-4 text-sm leading-7 text-[color:var(--mist)]">{locale === "uk" ? pillar.description.uk : pillar.description.en}</p>
             <ul className="mt-6 space-y-3 text-sm text-[color:var(--mist)]">
               {(locale === "uk" ? pillar.items.uk : pillar.items.en).map((item) => (
@@ -55,7 +55,7 @@ export default async function ServicesPage({
       </div>
 
       <div className="mt-12 rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
-        <h2 className="text-2xl font-semibold text-white">{dictionary.pages.services.whyTitle}</h2>
+        <h2 className="text-2xl font-semibold text-[color:var(--porcelain)]">{dictionary.pages.services.whyTitle}</h2>
         <p className="mt-4 text-sm leading-7 text-[color:var(--mist)]">{dictionary.pages.services.whyText}</p>
       </div>
     </PageShell>

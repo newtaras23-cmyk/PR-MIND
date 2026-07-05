@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Particles, ParticlesProvider } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import { useTheme } from "next-themes";
 import type { Container, ISourceOptions } from "@tsparticles/engine";
 
 const PARTICLE_COUNT = 55;
@@ -14,6 +15,8 @@ const initParticlesEngine = async (engine: Parameters<typeof loadSlim>[0]) => {
 
 export default function AmbientParticles() {
   const [reducedMotion, setReducedMotion] = useState(() => window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+  const { resolvedTheme } = useTheme();
+  const isLight = resolvedTheme === "light";
   const containerRef = useRef<Container | undefined>(undefined);
 
   useEffect(() => {
@@ -45,13 +48,18 @@ export default function AmbientParticles() {
       detectRetina: true,
       particles: {
         number: { value: PARTICLE_COUNT, density: { enable: true } },
-        // Washi (brand off-white) dominant, gold in ~1 of 4 particles to match the brand's low accent ratio.
-        color: { value: ["#F4EEE1", "#F4EEE1", "#F4EEE1", "#C39A43"] },
-        opacity: { value: { min: 0.15, max: 0.5 } },
+        // Dominant color is the theme's own text tone (washi on dark, sumi ink on light) with
+        // gold in ~1 of 4 particles — light-colored particles would vanish on the light bg.
+        color: {
+          value: isLight
+            ? ["#17140F", "#17140F", "#17140F", "#B98F33"]
+            : ["#F4EEE1", "#F4EEE1", "#F4EEE1", "#C39A43"],
+        },
+        opacity: { value: isLight ? { min: 0.1, max: 0.35 } : { min: 0.15, max: 0.5 } },
         size: { value: { min: 1, max: 2.2 } },
         links: {
           enable: true,
-          color: "#C39A43",
+          color: isLight ? "#B98F33" : "#C39A43",
           distance: 140,
           opacity: 0.12,
           width: 1,
@@ -71,7 +79,7 @@ export default function AmbientParticles() {
         modes: { grab: { distance: 160, links: { opacity: 0.25 } } },
       },
     }),
-    [reducedMotion],
+    [reducedMotion, isLight],
   );
 
   return (

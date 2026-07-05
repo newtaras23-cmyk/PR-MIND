@@ -88,7 +88,7 @@ export default async function InsightDetailPage({
 
         {insight.sections.map((section) => (
           <div key={section.heading.en} className="mt-8">
-            <h2 className="text-xl font-semibold text-white">{locale === "uk" ? section.heading.uk : section.heading.en}</h2>
+            <h2 className="text-xl font-semibold text-[color:var(--porcelain)]">{locale === "uk" ? section.heading.uk : section.heading.en}</h2>
             {(locale === "uk" ? section.paragraphs.uk : section.paragraphs.en).map((paragraph) => (
               <p key={paragraph} className="mt-3">
                 {paragraph}
@@ -116,7 +116,7 @@ export default async function InsightDetailPage({
       </article>
 
       <div className="mt-8 rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
-        <h2 className="text-xl font-semibold text-white">FAQ</h2>
+        <h2 className="text-xl font-semibold text-[color:var(--porcelain)]">FAQ</h2>
         <div className="mt-6 space-y-6">
           {insight.faq.map((item) => (
             <div key={item.question.en}>

@@ -32,11 +32,11 @@ export default async function TermsPage({
     <PageShell eyebrow={copy.eyebrow} title={copy.title} description={copy.description}>
       <div className="space-y-6 rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8 text-sm leading-7 text-[color:var(--mist)]">
         <div>
-          <h2 className="text-lg font-semibold text-white">{copy.useTitle}</h2>
+          <h2 className="text-lg font-semibold text-[color:var(--porcelain)]">{copy.useTitle}</h2>
           <p className="mt-2">{copy.useText}</p>
         </div>
         <div>
-          <h2 className="text-lg font-semibold text-white">{copy.requestsTitle}</h2>
+          <h2 className="text-lg font-semibold text-[color:var(--porcelain)]">{copy.requestsTitle}</h2>
           <p className="mt-2">{copy.requestsText}</p>
         </div>
       </div>

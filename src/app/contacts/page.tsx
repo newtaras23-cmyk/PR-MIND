@@ -37,7 +37,7 @@ export default async function ContactsPage({
     >
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
-          <h2 className="text-2xl font-semibold text-white">{locale === "uk" ? "Прямий контакт" : "Direct contact"}</h2>
+          <h2 className="text-2xl font-semibold text-[color:var(--porcelain)]">{locale === "uk" ? "Прямий контакт" : "Direct contact"}</h2>
           <ul className="mt-6 space-y-4 text-sm leading-7 text-[color:var(--mist)]">
             <li>{locale === "uk" ? "Telegram" : "Telegram"}: <span className="text-[color:var(--porcelain)]">{locale === "uk" ? "очікує налаштування" : "pending setup"}</span></li>
             <li>{locale === "uk" ? "WhatsApp" : "WhatsApp"}: <span className="text-[color:var(--porcelain)]">{locale === "uk" ? "очікує налаштування" : "pending setup"}</span></li>
@@ -55,7 +55,7 @@ export default async function ContactsPage({
       </div>
 
       <div className="mt-8 rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
-        <h2 className="text-2xl font-semibold text-white">{locale === "uk" ? "Що ви отримаєте" : "What you will receive"}</h2>
+        <h2 className="text-2xl font-semibold text-[color:var(--porcelain)]">{locale === "uk" ? "Що ви отримаєте" : "What you will receive"}</h2>
         <p className="mt-4 text-sm leading-7 text-[color:var(--mist)]">
           {locale === "uk"
             ? "Після звернення ми надаємо короткий план наступних кроків, підбираємо канал взаємодії і пояснюємо, чи підходить нам підхід для вашого випадку."

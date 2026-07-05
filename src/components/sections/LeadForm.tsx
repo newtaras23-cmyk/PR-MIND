@@ -73,7 +73,7 @@ export function LeadForm() {
   return (
     <div className="glass-surface relative overflow-hidden rounded-[var(--r)] p-8">
       <div className="relative z-10">
-      <h2 className="text-2xl font-semibold text-white">{copy.heading}</h2>
+      <h2 className="text-2xl font-semibold text-[color:var(--porcelain)]">{copy.heading}</h2>
       <p className="mt-3 text-sm leading-7 text-[color:var(--mist)]">{copy.subheading}</p>
 
       {submitted ? (
@@ -144,7 +144,7 @@ export function LeadForm() {
 
           <button
             disabled={isSubmitting}
-            className="rounded-full bg-[color:var(--action-dim)] px-5 py-3 text-sm font-medium text-[color:var(--ink)] transition hover:brightness-90 disabled:cursor-not-allowed disabled:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)]"
+            className="rounded-full bg-[color:var(--action-dim)] px-5 py-3 text-sm font-medium text-[color:var(--on-gold)] transition hover:brightness-90 disabled:cursor-not-allowed disabled:opacity-70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--action)]"
           >
             {isSubmitting ? copy.submitting : copy.submit}
           </button>

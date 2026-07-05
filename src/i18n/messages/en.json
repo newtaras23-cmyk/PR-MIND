@@ -13,6 +13,11 @@
       "contact": "Contact",
       "privacy": "Privacy",
       "terms": "Terms"
+    },
+    "theme": {
+      "toggle": "Toggle theme",
+      "light": "Switch to light theme",
+      "dark": "Switch to dark theme"
     }
   },
   "home": {

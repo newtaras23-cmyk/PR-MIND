@@ -46,7 +46,7 @@ export default async function InsightsPage({
                 </span>
               )}
             </div>
-            <h2 className="mt-4 text-2xl font-semibold text-white">{locale === "uk" ? item.title.uk : item.title.en}</h2>
+            <h2 className="mt-4 text-2xl font-semibold text-[color:var(--porcelain)]">{locale === "uk" ? item.title.uk : item.title.en}</h2>
             <p className="mt-4 text-sm leading-7 text-[color:var(--mist)]">{locale === "uk" ? item.summary.uk : item.summary.en}</p>
             <Link href={`/${locale}/insights/${item.slug}`} className="mt-8 inline-flex text-sm font-medium text-[color:var(--action)]">
               {dictionary.pages.insights.readArticle} →
@@ -56,7 +56,7 @@ export default async function InsightsPage({
       </div>
 
       <div className="mt-12 rounded-[var(--r)] border border-[color:var(--line)] bg-[color:var(--graphite)] p-8">
-        <h2 className="text-2xl font-semibold text-white">{dictionary.pages.insights.whyTitle}</h2>
+        <h2 className="text-2xl font-semibold text-[color:var(--porcelain)]">{dictionary.pages.insights.whyTitle}</h2>
         <p className="mt-4 text-sm leading-7 text-[color:var(--mist)]">{dictionary.pages.insights.whyText}</p>
       </div>
     </PageShell>
