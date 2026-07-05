@@ -48,9 +48,9 @@ export function Header() {
         scrolled ? "glass-surface" : "border-b border-[color:var(--line)]/80 bg-[color:var(--ink)]/90 backdrop-blur"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-1.5 lg:px-8">
         <Link href="/" className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[color:var(--action)]">
-          <Logo variant="full" priority className="h-12 w-auto sm:h-14 md:h-16" />
+          <Logo variant="full" priority className="h-16 w-auto sm:h-20 md:h-24" />
         </Link>
         <nav aria-label="Primary" className="hidden items-center gap-6 text-sm text-[color:var(--mist)] md:flex">
           {navItems.map((item) => (
