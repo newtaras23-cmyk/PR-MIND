@@ -49,8 +49,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <Link href="/" className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[color:var(--action)]">
-          <Logo variant="full" tone="washi" priority className="hidden h-8 w-auto md:block" />
-          <Logo variant="symbol" tone="washi" priority className="h-8 w-8 md:hidden" />
+          <Logo variant="full" tone="washi" priority className="h-8 w-auto sm:h-9 md:h-10" />
         </Link>
         <nav aria-label="Primary" className="hidden items-center gap-6 text-sm text-[color:var(--mist)] md:flex">
           {navItems.map((item) => (
