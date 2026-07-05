@@ -78,11 +78,7 @@ export function ReputationSurface({ locale, heading, subheading }: { locale: Loc
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-[color:var(--cool-tint)] py-24">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
-        <div className="ambient-blob ambient-blob--action absolute left-[10%] top-1/4 h-[380px] w-[380px]" />
-        <div className="ambient-blob ambient-blob--violet absolute right-[8%] bottom-1/4 h-[340px] w-[340px] [animation-delay:5s]" />
-      </div>
+    <section ref={sectionRef} className="relative overflow-hidden bg-[color:var(--cool-tint)]/55 py-24">
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-[0.28em] text-[color:var(--action)]">

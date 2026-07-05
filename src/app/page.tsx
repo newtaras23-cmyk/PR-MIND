@@ -36,7 +36,7 @@ export default async function Home({
   const locale = resolveLocale(resolvedParams?.locale);
   const dictionary = getDictionary(locale);
   return (
-    <div className="min-h-screen bg-[color:var(--ink)] text-[color:var(--porcelain)]">
+    <div className="min-h-screen text-[color:var(--porcelain)]">
       <Header />
       <main>
         <section className="mx-auto flex max-w-7xl flex-col gap-12 px-6 py-24 lg:px-8 lg:py-32">

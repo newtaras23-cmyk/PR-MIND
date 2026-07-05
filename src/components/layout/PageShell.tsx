@@ -11,7 +11,7 @@ type PageShellProps = {
 
 export function PageShell({ eyebrow, title, description, children }: PageShellProps) {
   return (
-    <div className="flex min-h-screen flex-col bg-[color:var(--ink)] text-[color:var(--porcelain)]">
+    <div className="flex min-h-screen flex-col text-[color:var(--porcelain)]">
       <Header />
       <main className="flex-1">
         <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">

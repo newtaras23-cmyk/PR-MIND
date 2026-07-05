@@ -72,9 +72,6 @@ export function LeadForm() {
 
   return (
     <div className="glass-surface relative overflow-hidden rounded-[var(--r)] p-8">
-      <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-16 z-0 h-64 w-64">
-        <div className="ambient-blob ambient-blob--action absolute inset-0" />
-      </div>
       <div className="relative z-10">
       <h2 className="text-2xl font-semibold text-white">{copy.heading}</h2>
       <p className="mt-3 text-sm leading-7 text-[color:var(--mist)]">{copy.subheading}</p>
