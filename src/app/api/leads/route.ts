@@ -1,5 +1,3 @@
-import { promises as fs } from "fs";
-import path from "path";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { sendResendEmail, sendTelegramNotification, sendWebhook } from "@/lib/leadDispatch";
@@ -53,21 +51,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ success: true, message: "Lead received" });
     }
 
-    const storagePath = path.join(process.cwd(), "data", "leads.json");
-    await fs.mkdir(path.dirname(storagePath), { recursive: true });
-
-    let existing: Array<Record<string, unknown>> = [];
-
-    try {
-      const file = await fs.readFile(storagePath, "utf8");
-      existing = JSON.parse(file) as Array<Record<string, unknown>>;
-    } catch (error) {
-      const nodeError = error as NodeJS.ErrnoException;
-      if (nodeError.code !== "ENOENT") {
-        throw error;
-      }
-    }
-
     const entry = {
       id: crypto.randomUUID(),
       name: parsed.data.name,
@@ -84,21 +67,27 @@ export async function POST(request: Request) {
       submittedAt: new Date().toISOString(),
     };
 
-    existing.push(entry);
-    await fs.writeFile(storagePath, JSON.stringify(existing, null, 2));
-
     const dispatchResults = await Promise.allSettled([
       sendResendEmail(entry),
       sendTelegramNotification(entry),
       sendWebhook(entry),
     ]);
 
+    let anyDelivered = false;
     dispatchResults.forEach((result, index) => {
+      const channel = ["resend", "telegram", "webhook"][index];
       if (result.status === "rejected") {
-        const channel = ["resend", "telegram", "webhook"][index];
         console.error(`Lead dispatch failed (${channel}):`, result.reason);
+      } else if (!result.value.skipped) {
+        anyDelivered = true;
       }
     });
+
+    if (!anyDelivered) {
+      // No dispatch channel is configured — the lead was accepted but nobody was notified.
+      // Loud on purpose: this must show up in server logs until a real channel is wired up.
+      console.error("LEAD RECEIVED BUT NOT DELIVERED — no RESEND_API_KEY, TELEGRAM_BOT_TOKEN, or LEAD_WEBHOOK_URL configured.", entry);
+    }
 
     return NextResponse.json({ success: true, message: "Lead received", entry });
   } catch {

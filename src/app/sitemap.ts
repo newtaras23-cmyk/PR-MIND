@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
 import { servicePillars } from "@/content/services";
 import { insights } from "@/content/insights";
+import { siteUrl as baseUrl } from "@/lib/metadata";
 
-const baseUrl = "https://prmind.example";
 const locales = ["en", "uk"] as const;
 
 type RouteConfig = {

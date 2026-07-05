@@ -3,10 +3,8 @@ import { notFound } from "next/navigation";
 import { PageShell } from "@/components/layout/PageShell";
 import { insights } from "@/content/insights";
 import { getDictionary, resolveLocale } from "@/i18n/dictionaries";
-import { buildMetadata } from "@/lib/metadata";
+import { buildMetadata, siteUrl } from "@/lib/metadata";
 import { buildArticleSchema, buildBreadcrumbSchema, buildFaqPageSchema } from "@/lib/structuredData";
-
-const siteUrl = "https://prmind.example";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale?: string }> }) {
   const { slug, locale: localeParam } = await params;

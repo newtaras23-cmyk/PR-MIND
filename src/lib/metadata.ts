@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 const siteName = "PR-MIND";
 const siteDescription =
   "PR-MIND helps founders, executives, and public figures control how they are seen online through reputation strategy and discreet communications.";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://prmind.example";
+export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://prmind.example";
 
 const defaultKeywords = [
   "reputation management",

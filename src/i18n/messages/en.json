@@ -86,9 +86,9 @@
     "privacy": {
       "eyebrow": "Privacy",
       "title": "Privacy Policy",
-      "description": "Draft policy — requires client legal review before publication. // TODO: legal review",
+      "description": "Draft policy — requires client legal review before publication.",
       "dataTitle": "What we collect",
-      "dataText": "Name, preferred contact channel, and contact details you provide through the lead form. // TODO: extend once analytics is enabled",
+      "dataText": "Name, preferred contact channel, and contact details you provide through the lead form.",
       "useTitle": "How we use it",
       "useText": "Solely to respond to your request and route it to the right contact channel. Data is not shared with third parties without consent.",
       "rightsTitle": "Your rights",
@@ -97,7 +97,7 @@
     "terms": {
       "eyebrow": "Contacts",
       "title": "Terms of Service",
-      "description": "Draft terms — requires client legal review before publication. // TODO: legal review",
+      "description": "Draft terms — requires client legal review before publication.",
       "useTitle": "Use of this site",
       "useText": "Content on this site is provided for informational purposes about PR-MIND services and is not legal or financial advice.",
       "requestsTitle": "Requests and communication",

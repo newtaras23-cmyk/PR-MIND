@@ -3,10 +3,8 @@ import { PageShell } from "@/components/layout/PageShell";
 import { LeadForm } from "@/components/sections/LeadForm";
 import { ormService } from "@/content/services";
 import { getDictionary, resolveLocale } from "@/i18n/dictionaries";
-import { buildMetadata } from "@/lib/metadata";
+import { buildMetadata, siteUrl } from "@/lib/metadata";
 import { buildBreadcrumbSchema, buildServiceSchema } from "@/lib/structuredData";
-
-const siteUrl = "https://prmind.example";
 
 export async function generateMetadata({
   params,

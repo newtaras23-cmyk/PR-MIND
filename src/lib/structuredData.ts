@@ -1,12 +1,13 @@
+import { siteUrl } from "./metadata";
+
 export function buildOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'PR-MIND',
     alternateName: 'PR-MIND Reputation Agency',
-    url: 'https://prmind.example',
-    // TODO: logo — add once a real graphic asset exists (brand brief specifies text-only logo for now);
-    // a dangling image URL fails Google's Organization logo fetch check, so omit rather than fabricate.
+    url: siteUrl,
+    logo: `${siteUrl}/images/logo/PR-MIND_symbol_light.png`,
     description:
       'PR-MIND helps founders, executives, and public figures control how they are seen online through reputation strategy and discreet communications.',
     // TODO: sameAs — add PR-MIND's own verified profile URLs once created (LinkedIn/X company pages).
@@ -56,7 +57,7 @@ export function buildArticleSchema({
     url,
     datePublished,
     dateModified: dateModified ?? datePublished,
-    author: { '@type': 'Organization', name: 'PR-MIND', url: 'https://prmind.example' },
+    author: { '@type': 'Organization', name: 'PR-MIND', url: siteUrl },
     publisher: { '@type': 'Organization', name: 'PR-MIND' },
   };
 }
@@ -100,10 +101,10 @@ export function buildWebsiteSchema() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'PR-MIND',
-    url: 'https://prmind.example',
+    url: siteUrl,
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://prmind.example/en/insights?q={search_term_string}',
+      target: `${siteUrl}/en/insights?q={search_term_string}`,
       'query-input': 'required name=search_term_string',
     },
   };

@@ -7,7 +7,8 @@ import { trackEvent } from "@/lib/analytics";
 export function BookingEmbed() {
   const pathname = usePathname();
   const locale = resolveLocale(pathname?.split("/")[1]);
-  const calLink = process.env.NEXT_PUBLIC_CAL_COM_LINK; // TODO: handles — set once Cal.com account exists
+  // Set once a real Cal.com account exists; falls back to a plain notice until then.
+  const calLink = process.env.NEXT_PUBLIC_CAL_COM_LINK;
 
   if (!calLink) {
     return (
@@ -17,8 +18,8 @@ export function BookingEmbed() {
         </h2>
         <p className="mt-3 leading-7">
           {locale === "uk"
-            ? "Слот під Cal.com — з’явиться, щойно буде підключено акаунт бронювання. // TODO: NEXT_PUBLIC_CAL_COM_LINK"
-            : "Cal.com slot — activates once a booking account is connected. // TODO: NEXT_PUBLIC_CAL_COM_LINK"}
+            ? "Слот під Cal.com — з’явиться, щойно буде підключено акаунт бронювання."
+            : "Cal.com slot — activates once a booking account is connected."}
         </p>
       </div>
     );
