@@ -18,7 +18,9 @@ const SOURCES: Record<LogoVariant, Record<"ink" | "washi", { src: string; width:
   },
   full: {
     ink: { src: "/images/logo/PR-MIND_horizontal_light.svg", width: 1200, height: 420 },
-    washi: { src: "/images/logo/PR-MIND_horizontal_dark.svg", width: 1200, height: 420 },
+    // _dark.svg ships with an opaque ink card baked in (brand-board mockup asset) — the
+    // _transparent variant strips that rect so the mark composites over our own header/footer background.
+    washi: { src: "/images/logo/PR-MIND_horizontal_dark_transparent.svg", width: 1200, height: 420 },
   },
 };
 
